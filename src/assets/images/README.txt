@@ -1,0 +1,1 @@
+Apni saari .jpg, .png images is folder me daalein. Feed me automatically show ho jayengi.

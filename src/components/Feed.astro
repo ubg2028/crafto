@@ -1,14 +1,27 @@
-    <!-- 3. Content Area - REELS SNAP SCROLL -->
-    <main id="mainContent" class="hidden">
-        <div id="loadingGallery" class="flex flex-col items-center justify-center h-full w-full">
-            <div class="cute-spinner"></div>
-        </div>
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 
-        <div id="gallery" class="w-full">
-            <!-- Dynamic Posters will be injected here -->
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,webp,gif}');
+---
+<div class="feed-container">
+  {
+    Object.keys(images).length === 0 ? (
+      <div class="empty-state">
+        <p><code>src/assets/images/</code> folder me images upload karein.</p>
+      </div>
+    ) : (
+      Object.entries(images).map(([path, resolver]) => (
+        <div class="card">
+          <Image src={resolver()} alt="Auto Fetched Image" loading="lazy" />
         </div>
-        
-        <div id="loadingMore" class="text-center p-8 hidden">
-            <div class="cute-spinner mx-auto"></div>
-        </div>
-    </main>
+      ))
+    )
+  }
+</div>
+<style>
+  .feed-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; padding: 16px; max-width: 800px; margin: 0 auto; }
+  .card { border-radius: 12px; overflow: hidden; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+  .card img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/5; }
+  .empty-state { grid-column: 1 / -1; text-align: center; padding: 40px 20px; color: #777; background: #fff; border-radius: 12px; }
+</style>
