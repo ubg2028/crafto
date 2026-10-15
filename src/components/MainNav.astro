@@ -1,0 +1,16 @@
+    <!-- 2. Main Navigation -->
+    <nav id="mainNav" class="fixed top-0 left-0 right-0 bg-emerald-50/90 backdrop-blur-md z-40 px-6 py-3 flex justify-between items-center border-b border-emerald-100 shadow-sm hidden">
+        <div class="flex items-center gap-2">
+            <div class="bg-gradient-to-tr from-emerald-500 to-teal-500 p-2 rounded-xl rotate-3 shadow-sm">
+                <i class="fab fa-pinterest text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold tracking-tight italic text-emerald-600">Posty<span class="text-teal-500">.</span></span>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="text-right hidden sm:block">
+                <p id="navUserName" class="text-sm font-bold leading-none text-emerald-700"></p>
+                <p class="text-[10px] text-emerald-400 uppercase tracking-widest">Poster Editor</p>
+            </div>
+            <img id="navUserPic" class="w-10 h-10 rounded-full object-cover border-2 border-emerald-200 cursor-pointer hover:scale-110 transition z-10" onclick="toggleEditProfilePopup()" src="">
+        </div>
+    </nav>

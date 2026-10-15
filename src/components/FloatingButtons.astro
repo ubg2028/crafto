@@ -1,0 +1,47 @@
+    <!-- 5. Floating Action Buttons -->
+  <div id="floatingButtonsContainer" class="fixed bottom-8 left-0 right-0 z-[110] px-4 hidden">
+        <div class="bg-emerald-50/95 backdrop-blur-md p-3 rounded-[2.5rem] shadow-2xl max-w-lg mx-auto border border-emerald-100">
+            <div class="floating-bar-wrap">
+                <button onclick="showDownloadOptions()" class="main-btn w-12 h-12 bg-gradient-to-tr from-emerald-500 to-teal-500 text-white rounded-full shadow-lg hover:scale-110 transition active:scale-90" title="Save Image" style="
+    width: 24px;    height: 24px;">
+                    <i class="fas fa-download"></i>
+                </button>
+                <button onclick="sharePoster()" class="main-btn w-12 h-12 bg-gradient-to-tr from-cyan-400 to-emerald-400 text-white rounded-full shadow-lg hover:scale-110 transition active:scale-90" title="Share Directly" style="
+    width: 24px;    height: 24px;">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+                
+                <div class="w-px h-8 bg-emerald-200 mx-1"></div>
+
+                <button onclick="editSocials()" class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full border border-emerald-200 hover:bg-emerald-200 transition" style="
+    width: 24px;    height: 24px;"title="Manage Socials">
+                    <i class="fas fa-users text-xs"></i>
+                </button>
+
+                <button onclick="togglePanel('fontListPanel')" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full border border-emerald-200 hover:bg-emerald-200 transition" title="Fonts">
+                    <i class="fas fa-font text-xs"></i>
+                </button>
+                <button onclick="togglePanel('alignmentPanel')" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full border border-emerald-200 hover:bg-emerald-200 transition" title="Alignment">
+                    <i class="fas fa-arrows-alt-h text-xs"></i>
+                </button>
+                <button onclick="togglePanel('adjustmentsPanel')" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-full border border-emerald-200 hover:bg-emerald-200 transition" title="Profile Size & Opacity">
+                    <i class="fas fa-expand-alt text-xs"></i>
+                </button>
+                <button onclick="changeProfileShape()" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-teal-100 text-teal-600 rounded-full border border-teal-200 hover:bg-teal-200 transition" title="Shape">
+                    <i class="fas fa-shapes text-xs"></i>
+                </button>
+                <button onclick="applyFilter()" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-teal-100 text-teal-600 rounded-full border border-teal-200 hover:bg-teal-200 transition" title="Filters">
+                    <i class="fas fa-wand-sparkles text-xs"></i>
+                </button>
+                <button onclick="changeProfileBackground()" style="
+    width: 24px;    height: 24px;"class="w-10 h-10 bg-teal-100 text-teal-600 rounded-full border border-teal-200 hover:bg-teal-200 transition" title="Banner">
+                    <i class="fas fa-image text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>

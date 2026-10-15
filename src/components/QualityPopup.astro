@@ -1,0 +1,11 @@
+    <!-- 6. Quality Selector (UPDATED: Passed 'this' to onClick) -->
+    <div id="qualityPopup" class="fixed inset-0 bg-emerald-900/60 backdrop-blur-sm z-[220] hidden flex items-center justify-center p-4">
+        <div class="cute-card p-8 w-full max-w-xs text-center shadow-2xl border border-emerald-100">
+            <h3 class="text-xl font-bold mb-6 italic text-emerald-600">Export Options ✨</h3>
+            <div class="space-y-3">
+                <button onclick="downloadPoster(2, this)" class="w-full py-4 bg-emerald-50 rounded-2xl font-bold hover:bg-emerald-100 hover:text-emerald-600 transition text-emerald-600 border border-emerald-100 flex items-center justify-center gap-2">Standard (SD)</button>
+                <button onclick="downloadPoster(4, this)" class="w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl font-bold shadow-lg shadow-emerald-200 flex items-center justify-center gap-2">Ultra HD (4K) 🔥</button>
+                <button onclick="togglePanel('qualityPopup')" class="w-full py-2 text-emerald-300 text-xs mt-4">Cancel</button>
+            </div>
+        </div>
+    </div>

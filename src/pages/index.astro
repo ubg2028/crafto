@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import UserSetupModal from '../components/UserSetupModal.astro';
+import MainNav from '../components/MainNav.astro';
+import Feed from '../components/Feed.astro';
+import InstallBanner from '../components/InstallBanner.astro';
+import EditorModal from '../components/EditorModal.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+import QualityPopup from '../components/QualityPopup.astro';
+import BottomNav from '../components/BottomNav.astro';
+---
+<Layout>
+    <UserSetupModal />
+    <MainNav />
+    <Feed />
+    <InstallBanner />
+    <EditorModal />
+    <FloatingButtons />
+    <QualityPopup />
+    <BottomNav />
+
+    <script>
+        import '../scripts/poster.js';
+    </script>
+</Layout>
